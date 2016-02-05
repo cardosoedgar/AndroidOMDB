@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OMDBexample</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_search_movie">Buscar Filme</string>
+    <string name="title_activity_movie">Filmes</string>
+    <string name="search_title">buscar filme</string>
+    <string name="movie_poster">Movie Poster</string>
+</resources>
