@@ -1,6 +1,8 @@
 package com.cardosoedgar.omdbexample.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cardosoedgar.omdbexample.DetailActivity;
 import com.cardosoedgar.omdbexample.R;
 import com.cardosoedgar.omdbexample.model.Movie;
 import com.squareup.picasso.Picasso;
@@ -39,6 +42,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Movie movie = movieList.get(position);
+        holder.movie = movie;
         String title = movie.getTitle() + " (" + movie.getYear() + ")";
         String subtitle = movie.getRuntime() + ", " + movie.getGenre();
 
@@ -63,8 +67,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         return movieList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        Movie movie;
         TextView title;
         TextView subtitle;
         TextView rating;
@@ -72,10 +77,20 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             title = (TextView) itemView.findViewById(R.id.title);
             subtitle = (TextView) itemView.findViewById(R.id.subtitle);
             rating = (TextView) itemView.findViewById(R.id.rating);
             poster = (ImageView) itemView.findViewById(R.id.image);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Activity activity = (Activity) view.getContext();
+            Intent intent = new Intent(activity, DetailActivity.class);
+            intent.putExtra("movie",movie);
+            activity.startActivity(intent);
+
         }
     }
 }

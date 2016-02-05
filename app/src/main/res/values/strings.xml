@@ -5,4 +5,5 @@
     <string name="title_activity_movie">Filmes</string>
     <string name="search_title">buscar filme</string>
     <string name="movie_poster">Movie Poster</string>
+    <string name="title_activity_detail">DetailActivity</string>
 </resources>

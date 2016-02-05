@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cardosoedgar.omdbexample.DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/movie_poster"
+            android:id="@+id/poster"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:layout_marginLeft="160dp"
+            android:layout_marginStart="160dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Titulo (Year)"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignLeft="@id/title"
+            android:layout_alignStart="@id/title"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:layout_below="@id/title"
+            android:fontFamily="sans-serif"
+            android:text="Runtime, Genre"
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignLeft="@id/title"
+            android:layout_alignStart="@id/title"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:layout_below="@id/subtitle"
+            android:fontFamily="sans-serif"
+            android:text="English (Country)"
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignLeft="@id/title"
+            android:layout_alignStart="@id/title"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:layout_below="@id/country"
+            android:fontFamily="sans-serif"
+            android:text="Director"
+            android:id="@+id/director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_star"
+            android:id="@+id/image_star"
+            android:layout_alignLeft="@id/title"
+            android:layout_alignStart="@id/title"
+            android:layout_below="@id/director"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/image_star"
+            android:layout_toRightOf="@id/image_star"
+            android:layout_alignBottom="@id/image_star"
+            android:textSize="16sp"
+            android:layout_below="@id/director"
+            android:fontFamily="sans-serif"
+            android:text="7.6 / 90"
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignStart="@id/image_star"
+            android:layout_alignLeft="@id/image_star"
+            android:textSize="14sp"
+            android:layout_below="@id/image_star"
+            android:fontFamily="sans-serif-light"
+            android:text="123123 votes"
+            android:id="@+id/votes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp"
+            android:layout_below="@id/votes"
+            android:id="@+id/plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="bold"
+            android:text="Actors:"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14sp"
+            android:layout_below="@id/plot"
+            android:id="@+id/text_actors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp"
+            android:layout_below="@id/text_actors"
+            android:id="@+id/actors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</ScrollView>

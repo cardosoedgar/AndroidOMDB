@@ -3,10 +3,12 @@ package com.cardosoedgar.omdbexample.model;
 import com.google.gson.annotations.SerializedName;
 import com.orm.SugarRecord;
 
+import java.io.Serializable;
+
 /**
  * Created by edgarcardoso on 2/4/16.
  */
-public class Movie extends SugarRecord {
+public class Movie extends SugarRecord implements Serializable{
 
     @SerializedName("imdbID") String movieId;
     @SerializedName("Title") String title;
